@@ -1,0 +1,84 @@
+
+// Food Gallery
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.food-gallery
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: 0 auto 3rem
+  max-width: 90%
+  height: auto
+
+.food-gallery__title
+  max-width: 90%
+  margin-bottom: 2.5rem
+  padding: 1rem 2rem
+  background-color: $color-red
+  color: $color-white
+  border: 0.4rem solid $color-white
+  border-radius: 5rem
+  // text-transform: uppercase
+
+
+.food-gallery__items
+  max-width: 100%
+  height: auto
+  border-radius: 5rem
+  box-shadow: 0 0 0 0.5rem $color-red, 0 0 0 1rem $color-white
+  background-color: $color-red
+
+.food-gallery__images
+  position: relative
+  z-index: 2
+  margin-bottom: 0.5rem
+  border-top-left-radius: 5rem
+  border-top-right-radius: 5rem
+
+  & img
+    z-index: 1
+    width: 100%
+    height: auto
+    // border-top-left-radius: 5rem
+    // border-top-right-radius: 5rem
+
+.food-gallery__controls
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+  align-content: center
+
+.food-gallery__btn
+  margin: 1rem
+  padding: 1rem 3rem
+  text-decoration: none
+  font-size: 1.5rem
+  font-weight: 400
+  line-height: 1.5
+  color: $color-white
+  background-color: $color-red
+  border: 0.2rem solid $color-white
+  border-radius: 1rem
+  cursor: pointer
+  transition: .3s
+  user-select: none
+
+//Larger than mobile screen
+@media (min-width: 40.0rem)
+
+  // .food-gallery__images
+  //   & img
+  //     border-radius: 0
+
+  .food-gallery__btn
+    margin: 0.5rem
+
+
+//Larger than tablet screen
+@media (min-width: 80.0rem)
+
+  .food-gallery__btn
+    &:hover
+      background-color: $color-darker-red

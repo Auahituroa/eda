@@ -1,0 +1,38 @@
+
+// Intro
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.intro
+  max-width: 90%
+  margin: 0 auto 3rem
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.intro__title
+  @extend h2
+  display: inline-flex
+  padding: 1rem 2rem
+  margin-bottom: 2.5rem
+  border-radius: 5rem
+  background-color: $color-red
+  border: 0.4rem solid $color-white
+  color: $color-white
+  text-align: center
+
+.intro__desc
+  margin: 0
+  padding: 1.5rem
+  border-radius: 5rem
+  background-color: $color-white
+  box-shadow: 0 0 0 0.5rem $color-red, 0 0 0 1rem $color-white
+
+  h3
+    text-align: center
+
+//Larger than tablet screen
+@media (min-width: 80.0rem)
+
+  .intro__list
+    font-size: 1.8rem

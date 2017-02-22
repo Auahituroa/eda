@@ -1,0 +1,29 @@
+
+// Main Layout
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.main-layout
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+@media (min-width: 80.0rem)
+
+  .main-layout
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: baseline
+
+    .intro
+      max-width: 47%
+
+    .news
+      max-width: 47%
+
+    .food-gallery
+      max-width: 47%
+
+    .menu
+      max-width: 47%

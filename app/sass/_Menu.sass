@@ -1,0 +1,54 @@
+
+// Menu
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.menu
+  width: 90%
+  margin: 0 auto 3rem
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.menu__title
+  padding: 1rem 2rem
+  border-radius: 5rem
+  background-color: $color-red
+  border: 0.4rem solid $color-white
+  color: $color-white
+
+.menu__items
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  width: 100%
+  padding: 2rem
+  border-radius: 5rem
+  background-color: $color-white
+  box-shadow: 0 0 0 0.5rem $color-red, 0 0 0 1rem $color-white
+
+.menu__btn
+    margin: 0 auto
+    padding: 1rem 3rem
+    text-decoration: none
+    font-size: 1.5rem
+    font-weight: 400
+    line-height: 1.5
+    color: $color-white
+    background-color: $color-red
+    border-radius: 1rem
+    cursor: pointer
+    transition: .3s
+    user-select: none
+
+//Larger than tablet screen
+@media (min-width: 80.0rem)
+
+  .menu__table
+    font-size: 1.8rem
+
+  .menu__btn
+    &:hover
+      background-color: $color-darker-red
