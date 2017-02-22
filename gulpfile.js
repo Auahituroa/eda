@@ -12,13 +12,13 @@ var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function(){
-  return gulp.src('app/sass/style.sass')
+  return gulp.src('sass/style.sass')
     .pipe(sass())
     .pipe(autoprefixer({
             browsers: ['last 3 versions'],
             cascade: false
     }))
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -27,53 +27,31 @@ gulp.task('sass', function(){
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: 'app'
+      baseDir: ''
     },
   })
 })
 
 gulp.task('watch', ['browserSync', 'sass'], function(){
-  gulp.watch('app/sass/**/*.sass', ['sass']);
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', browserSync.reload);
+  gulp.watch('sass/**/*.sass', ['sass']);
+  gulp.watch('*.html', browserSync.reload);
+  gulp.watch('js/**/*.js', browserSync.reload);
 })
 
-gulp.task('useref', function(){
-  return gulp.src('app/*.html')
+gulp.task('style', function(){
+  return gulp.src('css/*.css')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', minifyCSS()))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('css'))
 });
 
 gulp.task('images', function(){
-  return gulp.src('app/img/**/*.+(png|jpg|gif|svg)')
+  return gulp.src('img/src/**/*.+(png|jpg|jpeg|gif|svg)')
     .pipe(cache(imagemin({
       interlaced: true
       })))
-    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('img'))
 });
-
-gulp.task('fonts', function() {
-  return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'))
-})
-
-gulp.task('clean', function(callback) {
-  del('dist');
-  return cache.clearAll(callback);
-})
-
-gulp.task('clean:dist', function(callback){
-  del(['dist/**/*', '!dist/img', '!dist/img/**/*'], callback)
-});
-
-gulp.task('build', [`clean`, `sass`, `useref`, `images`, `fonts`], function (callback){
-  runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
-    callback
-  )
-})
 
 gulp.task('default', function (callback) {
   runSequence(['sass','browserSync', 'watch'],
