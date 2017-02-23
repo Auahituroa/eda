@@ -1,7 +1,11 @@
 
 // Typography
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-@import "http://webfonts.ru/import/gunnyrewritten.css"
+@font-face
+    font-family: 'Gunny Rewritten'
+    src: local('Gunny Rewritten'), local('GunnyRewritten'), url('../fonts/gunnyrewritten.woff2') format('woff2'), url('../fonts/gunnyrewritten.woff') format('woff'), url('../fonts/gunnyrewritten.ttf') format('truetype')
+    font-weight: 400
+    font-style: normal
 
 b,
 strong
@@ -16,7 +20,7 @@ h3,
 h4,
 h5,
 h6
-	font-family: 'Gunny Rewritten'
+	font-family: 'Gunny Rewritten', 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
 	font-weight: 400
 	letter-spacing: -.1rem
 	margin-bottom: 2.0rem
