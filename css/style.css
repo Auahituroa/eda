@@ -523,8 +523,6 @@ h6 {
   max-width: 100%;
   height: auto;
   padding: 0; }
-  .main-header__logo.main-header__logo--tablet {
-    display: none; }
 
 .navigation {
   max-width: 100%;
@@ -577,10 +575,6 @@ h6 {
     cursor: default; }
 
 @media (min-width: 40rem) {
-  .main-header .main-header__logo--tablet {
-    display: block; }
-  .main-header .main-header__logo--mobile {
-    display: none; }
   .navigation .navigation__list {
     display: -ms-flexbox;
     display: flex;
@@ -831,65 +825,6 @@ h6 {
   .food-gallery__btn:hover {
     background-color: #c80002; } }
 
-.menu {
-  width: 90%;
-  margin: 0 auto 3rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.menu__title {
-  padding: 1rem 2rem;
-  border-radius: 5rem;
-  background-color: #ff0002;
-  border: 0.4rem solid white;
-  color: white; }
-
-.menu__items {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  padding: 2rem;
-  border-radius: 5rem;
-  background-color: white;
-  box-shadow: 0 0 0 0.5rem #ff0002, 0 0 0 1rem white; }
-
-.menu__btn {
-  margin: 0 auto;
-  padding: 1rem 3rem;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: white;
-  background-color: #ff0002;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: .3s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-@media (min-width: 80rem) {
-  .menu__table {
-    font-size: 1.8rem; }
-  .menu__btn:hover {
-    background-color: #c80002; } }
-
 .main-footer {
   border-top: 0.4rem solid #ff0002;
   display: -ms-flexbox;
@@ -961,6 +896,4 @@ h6 {
     .main-layout .news {
       max-width: 47%; }
     .main-layout .food-gallery {
-      max-width: 47%; }
-    .main-layout .menu {
       max-width: 47%; } }
