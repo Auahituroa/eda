@@ -83,12 +83,24 @@
       <h2 class="food-gallery__title">Фотогалерея</h2>
       <div class="food-gallery__items">
         <div class="food-gallery__images">
-          <img src="img/food-1.jpeg" alt="ЕДА" width="1280"  height="772">
-          <img src="img/food-2.jpeg" alt="ЕДА" width="1280"  height="770">
-          <img src="img/food-3.jpeg" alt="ЕДА" width="1280"  height="768">
-          <img src="img/food-4.jpeg" alt="ЕДА" width="1280"  height="773">
-          <img src="img/food-5.jpeg" alt="ЕДА" width="1280"  height="767">
-          <img src="img/food-6.jpeg" alt="ЕДА" width="1280"  height="770">
+          <div class="food-gallery__image">
+            <img src="img/food-1.jpeg" alt="ЕДА" width="1280"  height="772">
+          </div>
+          <div class="food-gallery__image">
+            <img src="img/food-2.jpeg" alt="ЕДА" width="1280"  height="770">
+          </div>
+          <div class="food-gallery__image">
+            <img src="img/food-3.jpeg" alt="ЕДА" width="1280"  height="768">
+          </div>
+          <div class="food-gallery__image">
+            <img src="img/food-4.jpeg" alt="ЕДА" width="1280"  height="773">
+          </div>
+          <div class="food-gallery__image">
+            <img src="img/food-5.jpeg" alt="ЕДА" width="1280"  height="767">
+          </div>
+          <div class="food-gallery__image">
+            <img src="img/food-6.jpeg" alt="ЕДА" width="1280"  height="770">
+          </div>
         </div>
         <div class="food-gallery__controls">
           <div class="food-gallery__btn  food-gallery__btn--prev">Назад</div>
@@ -150,7 +162,21 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <script src="js/siema.min.js"></script>
-<script src="js/siema-conf.js"></script>
+<script>
+  const foodGallery = new Siema({
+  selector: '.food-gallery__images',
+  duration: 200,
+  easing: 'ease-out',
+  perPage: 1,
+  startIndex: 0,
+  draggable: true,
+  threshold: 20,
+  loop: false,
+});
+document.querySelector('.food-gallery__btn--prev').addEventListener('click', () =>   foodGallery.prev());
+document.querySelector('.food-gallery__btn--next').addEventListener('click', () =>   foodGallery.next());
+
+</script>
 
 </body>
 </html>
