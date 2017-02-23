@@ -11,22 +11,24 @@
   align-items: center
 
 .intro__title
-  @extend h2
-  display: inline-flex
-  padding: 1rem 2rem
+  display: block
+  padding: 2rem 2rem
   margin-bottom: 2.5rem
-  border-radius: 5rem
-  background-color: $color-red
-  border: 0.4rem solid $color-white
-  color: $color-white
+  border-radius: 50%
+  background-color: $color-white
+  border: 0.4rem solid $color-red
+  color: $color-green
   text-align: center
+
+  &::first-letter
+    color: $color-red
 
 .intro__desc
   margin: 0
   padding: 1.5rem
   border-radius: 5rem
   background-color: $color-white
-  box-shadow: 0 0 0 0.5rem $color-red, 0 0 0 1rem $color-white
+  box-shadow: 0 0 0 0.4rem $color-red, 0 0 0 0.8rem $color-white
 
   h3
     text-align: center

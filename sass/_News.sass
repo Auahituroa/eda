@@ -11,14 +11,17 @@
   align-items: center
 
 .news__title
-  padding: 1rem 2rem
+  display: block
+  padding: 0.5rem 2rem
   margin-bottom: 2.5rem
   border-radius: 5rem
-  background-color: $color-red
-  border: 0.4rem solid $color-white
-  color: $color-white
+  background-color: $color-white
+  border: 0.4rem solid $color-red
+  color: $color-green
   text-align: center
   // text-transform: uppercase
+  &::first-letter
+    color: $color-red
 
 .news__items
   display: flex
@@ -29,7 +32,7 @@
   padding: 1.5rem
   border-radius: 5rem
   background-color: $color-white
-  box-shadow: 0 0 0 0.5rem $color-red, 0 0 0 1rem $color-white
+  box-shadow: 0 0 0 0.4rem $color-red, 0 0 0 0.8rem $color-white
 
 .news__item
   display: flex
@@ -51,7 +54,8 @@
   margin: 0 auto
   padding: 1rem 3rem
   text-decoration: none
-  font-size: 1.5rem
+  text-transform: uppercase
+  font-size: 1.4rem
   font-weight: 400
   line-height: 1.5
   color: $color-white

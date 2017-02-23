@@ -7,6 +7,7 @@
  * 3. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import "http://webfonts.ru/import/gunnyrewritten.css";
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -439,40 +440,40 @@ p {
 
 h1,
 h2,
-.intro__title,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-family: 'Gunny Rewritten';
+  font-weight: 400;
   letter-spacing: -.1rem;
   margin-bottom: 2.0rem;
   margin-top: 0; }
 
 h1 {
-  font-size: 4.0rem;
+  font-size: 5.0rem;
   line-height: 1.2; }
 
-h2, .intro__title {
-  font-size: 3.6rem;
+h2 {
+  font-size: 4.6rem;
   line-height: 1.25; }
 
 h3 {
-  font-size: 3.0rem;
+  font-size: 4.0rem;
   line-height: 1.3; }
 
 h4 {
-  font-size: 2.4rem;
+  font-size: 3.4rem;
   letter-spacing: -.08rem;
   line-height: 1.35; }
 
 h5 {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   letter-spacing: -.05rem;
   line-height: 1.5; }
 
 h6 {
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   letter-spacing: 0;
   line-height: 1.4; }
 
@@ -480,24 +481,8 @@ h6 {
   p {
     font-size: 1.8rem; }
   h1 {
-    font-size: 5.0rem; }
-  h2, .intro__title {
-    font-size: 4.2rem; }
-  h3 {
-    font-size: 3.6rem; }
-  h4 {
-    font-size: 3.0rem; }
-  h5 {
-    font-size: 2.4rem; }
-  h6 {
-    font-size: 1.5rem; } }
-
-@media (min-width: 120rem) {
-  p {
-    font-size: 2.0rem; }
-  h1 {
     font-size: 6.0rem; }
-  h2, .intro__title {
+  h2 {
     font-size: 5.2rem; }
   h3 {
     font-size: 4.6rem; }
@@ -507,6 +492,22 @@ h6 {
     font-size: 3.4rem; }
   h6 {
     font-size: 2.5rem; } }
+
+@media (min-width: 120rem) {
+  p {
+    font-size: 2.0rem; }
+  h1 {
+    font-size: 7.0rem; }
+  h2 {
+    font-size: 6.2rem; }
+  h3 {
+    font-size: 5.6rem; }
+  h4 {
+    font-size: 5.0rem; }
+  h5 {
+    font-size: 4.4rem; }
+  h6 {
+    font-size: 3.5rem; } }
 
 .main-header {
   display: -ms-flexbox;
@@ -523,13 +524,15 @@ h6 {
   max-width: 100%;
   height: auto;
   padding: 0; }
+  .main-header__logo.main-header__logo--tablet {
+    display: none; }
 
 .navigation {
   max-width: 100%;
   background-color: #ff0002; }
   .navigation.navigation--white-border {
-    border-top: 0.4rem solid white;
-    border-bottom: 0.4rem solid white;
+    border-top: 0.3rem solid white;
+    border-bottom: 0.3rem solid white;
     padding: 0.5rem 0; }
 
 .navigation__list {
@@ -553,9 +556,10 @@ h6 {
 .navigation__link {
   display: -ms-inline-flexbox;
   display: inline-flex;
+  font-family: 'Gunny Rewritten';
   padding: 1rem;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 400;
   line-height: 1.2;
   color: white;
@@ -575,6 +579,10 @@ h6 {
     cursor: default; }
 
 @media (min-width: 40rem) {
+  .main-header .main-header__logo--tablet {
+    display: block; }
+  .main-header .main-header__logo--mobile {
+    display: none; }
   .navigation .navigation__list {
     display: -ms-flexbox;
     display: flex;
@@ -589,6 +597,9 @@ h6 {
     cursor: default; } }
 
 @media (min-width: 80rem) {
+  .navigation .navigation__list {
+    max-width: 80%;
+    margin: 0 auto; }
   .navigation .navigation__link:hover {
     background-color: #c80002;
     border: 0.2rem solid white; }
@@ -601,8 +612,8 @@ h6 {
       background-color: inherit; } }
 
 @media (min-width: 120rem) {
-  .navigation__link {
-    font-size: 2.2rem; } }
+  .navigation .navigation__link {
+    font-size: 3rem; } }
 
 .intro {
   max-width: 90%;
@@ -617,22 +628,23 @@ h6 {
   align-items: center; }
 
 .intro__title {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 1rem 2rem;
+  display: block;
+  padding: 2rem 2rem;
   margin-bottom: 2.5rem;
-  border-radius: 5rem;
-  background-color: #ff0002;
-  border: 0.4rem solid white;
-  color: white;
+  border-radius: 50%;
+  background-color: white;
+  border: 0.4rem solid #ff0002;
+  color: #019645;
   text-align: center; }
+  .intro__title::first-letter {
+    color: #ff0002; }
 
 .intro__desc {
   margin: 0;
   padding: 1.5rem;
   border-radius: 5rem;
   background-color: white;
-  box-shadow: 0 0 0 0.5rem #ff0002, 0 0 0 1rem white; }
+  box-shadow: 0 0 0 0.4rem #ff0002, 0 0 0 0.8rem white; }
   .intro__desc h3 {
     text-align: center; }
 
@@ -653,13 +665,16 @@ h6 {
   align-items: center; }
 
 .news__title {
-  padding: 1rem 2rem;
+  display: block;
+  padding: 0.5rem 2rem;
   margin-bottom: 2.5rem;
   border-radius: 5rem;
-  background-color: #ff0002;
-  border: 0.4rem solid white;
-  color: white;
+  background-color: white;
+  border: 0.4rem solid #ff0002;
+  color: #019645;
   text-align: center; }
+  .news__title::first-letter {
+    color: #ff0002; }
 
 .news__items {
   display: -ms-flexbox;
@@ -675,7 +690,7 @@ h6 {
   padding: 1.5rem;
   border-radius: 5rem;
   background-color: white;
-  box-shadow: 0 0 0 0.5rem #ff0002, 0 0 0 1rem white; }
+  box-shadow: 0 0 0 0.4rem #ff0002, 0 0 0 0.8rem white; }
 
 .news__item {
   display: -ms-flexbox;
@@ -702,7 +717,8 @@ h6 {
   margin: 0 auto;
   padding: 1rem 3rem;
   text-decoration: none;
-  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.5;
   color: white;
@@ -773,7 +789,7 @@ h6 {
   max-width: 100%;
   height: auto;
   border-radius: 5rem;
-  box-shadow: 0 0 0 0.5rem #ff0002, 0 0 0 1rem white;
+  box-shadow: 0 0 0 0.4rem #ff0002, 0 0 0 0.8rem white;
   background-color: #ff0002; }
 
 .food-gallery__images {
@@ -785,7 +801,8 @@ h6 {
   .food-gallery__images img {
     z-index: 1;
     width: 100%;
-    height: auto; }
+    height: auto;
+    object-fit: cover; }
 
 .food-gallery__controls {
   display: -ms-flexbox;
@@ -803,7 +820,8 @@ h6 {
   margin: 1rem;
   padding: 1rem 3rem;
   text-decoration: none;
-  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.5;
   color: white;
@@ -866,7 +884,7 @@ h6 {
 
 @media (min-width: 80rem) {
   .main-footer__social-items {
-    max-width: 70%; }
+    max-width: 30%; }
   .main-footer__social-btn:hover {
     opacity: 0.8;
     transition: .3s; } }

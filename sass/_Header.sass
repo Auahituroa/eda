@@ -19,14 +19,16 @@
   // margin: 1rem auto
   // border-radius: 1rem
   // border: 0.4rem solid $color-white
+  &.main-header__logo--tablet 
+    display: none 
 
 .navigation
   max-width: 100%
   background-color: $color-red
 
   &.navigation--white-border
-    border-top: 0.4rem solid $color-white
-    border-bottom: 0.4rem solid $color-white
+    border-top: 0.3rem solid $color-white
+    border-bottom: 0.3rem solid $color-white
     padding: 0.5rem 0;
 
 .navigation__list
@@ -46,9 +48,10 @@
 
 .navigation__link
   display: inline-flex
+  font-family: 'Gunny Rewritten'
   padding: 1rem
   text-decoration: none
-  font-size: 2rem
+  font-size: 2.6rem
   font-weight: 400
   line-height: 1.2
   color: $color-white
@@ -68,6 +71,14 @@
 //Larger than mobile screen
 @media (min-width: 40.0rem)
 
+  .main-header
+
+    .main-header__logo--tablet 
+      display: block 
+    
+    .main-header__logo--mobile 
+      display: none 
+
   .navigation
 
     .navigation__list
@@ -84,8 +95,12 @@
 
 //Larger than tablet screen
 @media (min-width: 80.0rem)
-
+  
   .navigation
+
+    .navigation__list
+      max-width: 80%
+      margin: 0 auto
 
     .navigation__link
       &:hover
@@ -101,6 +116,8 @@
 
 //Larger than desktop screen
 @media (min-width: 120.0rem)
-
-  .navigation__link
-    font-size: 2.2rem
+  
+  .navigation
+  
+    .navigation__link
+      font-size: 3rem
