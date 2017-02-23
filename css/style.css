@@ -883,6 +883,8 @@ h6 {
 
 @media (min-width: 80rem) {
   .main-layout {
+    margin: 0 auto;
+    max-width: 80%;
     -ms-flex-direction: row;
     flex-direction: row;
     -ms-flex-wrap: wrap;
@@ -896,4 +898,4 @@ h6 {
     .main-layout .news {
       max-width: 47%; }
     .main-layout .food-gallery {
-      max-width: 47%; } }
+      max-width: 80%; } }
