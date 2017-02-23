@@ -894,6 +894,14 @@ h6 {
     opacity: 0.8;
     transition: .3s; } }
 
+.disqus {
+  max-width: 90%;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  border-radius: 5rem;
+  background-color: white;
+  box-shadow: 0 0 0 0.4rem #ff0002, 0 0 0 0.8rem white; }
+
 .main-layout {
   display: -ms-flexbox;
   display: flex;
