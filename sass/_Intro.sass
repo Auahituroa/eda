@@ -33,6 +33,28 @@
   h3
     text-align: center
 
+.intro__list
+  list-style: none
+
+  li
+    position: relative
+
+    &::before
+      content: ""
+      position: absolute
+      left: -35px
+      top: 11px
+      display: block
+      height: 0.4rem
+      width: 2rem
+      background-color: $color-red
+
+    b
+      display: inline-block
+      color: $color-green
+      &::first-letter
+        color: $color-red
+
 //Larger than tablet screen
 @media (min-width: 80.0rem)
 

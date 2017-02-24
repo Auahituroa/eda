@@ -653,6 +653,25 @@ h6 {
   .intro__desc h3 {
     text-align: center; }
 
+.intro__list {
+  list-style: none; }
+  .intro__list li {
+    position: relative; }
+    .intro__list li::before {
+      content: "";
+      position: absolute;
+      left: -35px;
+      top: 11px;
+      display: block;
+      height: 0.4rem;
+      width: 2rem;
+      background-color: #ff0002; }
+    .intro__list li b {
+      display: inline-block;
+      color: #019645; }
+      .intro__list li b::first-letter {
+        color: #ff0002; }
+
 @media (min-width: 80rem) {
   .intro__list {
     font-size: 1.8rem; } }
