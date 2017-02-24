@@ -921,6 +921,26 @@ h6 {
   background-color: white;
   box-shadow: 0 0 0 0.4rem #ff0002, 0 0 0 0.8rem white; }
 
+.contacts {
+  max-width: 90%;
+  margin: 0 auto 3rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 5rem;
+  background-color: white;
+  box-shadow: 0 0 0 0.4rem #ff0002, 0 0 0 0.8rem white; }
+
+@media (min-width: 80rem) {
+  .contacts {
+    max-width: 80%; } }
+
 .main-layout {
   display: -ms-flexbox;
   display: flex;
