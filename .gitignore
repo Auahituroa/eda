@@ -37,4 +37,7 @@ jspm_packages
 .node_repl_history
 
 # Sass cache
-.sass_cache
+.sass-cache
+
+# Site folder
+_site
