@@ -1,0 +1,6 @@
+- name: Главная
+  link: /
+- name: Контакты
+  link: /about/
+- name: Архив
+  link: /recipes/

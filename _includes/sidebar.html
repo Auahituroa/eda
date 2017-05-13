@@ -1,0 +1,26 @@
+<aside class="sidebar {% if page.push_sidebar_down %}push{% endif %}">
+	<div class="author">
+		<p>
+			<a href="{{ site.baseurl }}/about/">
+				<img src="{{ site.baseurl }}{{ site.data.sidebar.author_image }}" alt="author" class="author">
+			</a>
+		</p>
+		<div class="sidebar-desc">
+			<ul>
+  			<li>Столовые и пиццерии в лучших уголках Крыма</li>
+  			<li>Самые свежие продукты</li>
+  			<li>Самые низкие цены в Крыму</li>
+  			<li>Самые большие в мире чебуреки</li>
+  			<li>Пицца по рецептам итальянских поваров</li>
+  			<li>Уют, комфорт и чистота во всех заведениях</li>
+  			<li>Наша Еда удовлетворит вкус любого гурмана! Ждем вас в гости!</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="social-icons">
+		<a target="_blank" href="mailto:{{ site.data.sidebar.email }}">{% include social-icon.html icon="Email" %}</a>
+		<a target="_blank" href="{{ site.baseurl }}/feed.xml">{% include social-icon.html icon="RSS" %}</a>
+	</div>
+
+</aside>
