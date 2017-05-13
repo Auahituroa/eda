@@ -2,7 +2,7 @@
 date: 2017-05-13
 title: Шоколадные кексы
 categories:
-  - Десерты
+  - recipes
 featured_image: https://source.unsplash.com/qJ0zGkrE1Zg/1920x1200
 recipe:
   servings: 12 кексов

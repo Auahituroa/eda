@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/2017/05/12/first-post/</loc>
+<loc>http://localhost:4000/news/2017/05/12/first-post/</loc>
 <lastmod>2017-05-12T00:00:00+03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/%D0%94%D0%B5%D1%81%D0%B5%D1%80%D1%82%D1%8B/2017/05/13/chocolate-cupcakes/</loc>
+<loc>http://localhost:4000/recipes/2017/05/13/chocolate-cupcakes/</loc>
 <lastmod>2017-05-13T00:00:00+03:00</lastmod>
 </url>
 <url>
